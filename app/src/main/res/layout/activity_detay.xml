@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetayActivity">
+    <EditText
+        android:id="@+id/not_guncelle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="Notunuzu Giriniz.."
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/saat_guncelle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baslik_guncelle" />
+
+    <EditText
+        android:id="@+id/tarih_guncelle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="319dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="34dp"
+        android:ems="10"
+        android:hint="yyyy-gg-aa"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/hatırlat_spinner"
+        app:layout_constraintEnd_toStartOf="@+id/saat_guncelle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/hatırlat_spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tarih_guncelle" />
+
+    <EditText
+        android:id="@+id/saat_guncelle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="sa:dk"
+        android:inputType="textCapCharacters|time"
+        app:layout_constraintBottom_toTopOf="@+id/hatırlat_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tarih_guncelle"
+        app:layout_constraintTop_toBottomOf="@+id/not_guncelle" />
+
+    <Button
+        android:id="@+id/btn_guncelle"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="guncelle"
+        android:text="GÜNCELLE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hatırlat_spinner" />
+
+    <EditText
+        android:id="@+id/baslik_guncelle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:hint="Not Başlığını Giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/not_guncelle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

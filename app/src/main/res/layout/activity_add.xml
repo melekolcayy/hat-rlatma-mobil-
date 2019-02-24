@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <EditText
+        android:id="@+id/not_yaz"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="Notunuzu Giriniz.."
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/saat_ayarla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baslik_yaz" />
+
+    <EditText
+        android:id="@+id/tarih_ayarla"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="319dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="yyyy aa gg"
+        app:layout_constraintBottom_toTopOf="@+id/hatırlat_spinner"
+        app:layout_constraintEnd_toStartOf="@+id/saat_ayarla"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textIsSelectable="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/hatırlat_spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tarih_ayarla" />
+
+    <EditText
+        android:id="@+id/saat_ayarla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:hint="sa:dk"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/hatırlat_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tarih_ayarla"
+        android:textIsSelectable="true"
+        app:layout_constraintTop_toBottomOf="@+id/not_yaz" />
+
+    <Button
+        android:id="@+id/btn_kaydet"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="13dp"
+        android:onClick="kaydet"
+        android:text="KAYDET"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hatırlat_spinner" />
+
+    <EditText
+        android:id="@+id/baslik_yaz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:hint="Not Başlığını Giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/not_yaz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
